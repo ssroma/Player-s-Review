@@ -1,0 +1,166 @@
+/* main css */
+
+.clear:before,
+.clear:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clear:after {
+    clear: both;
+}
+
+
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+body{
+  font-family: $fontNormal;
+  font-weight: $normal;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+#wrapper{
+  width: 100%;
+  height: auto;
+  
+  #mainHeader{
+  width: 100%;
+  height: auto;
+  margin: 0 auto 0 auto;
+  position: fixed;
+  z-index: 999;
+  
+    nav.navbar-default{
+      background-color: $light;
+      border-bottom: 3px solid $lighter;
+      
+     // div.container-fluid{
+        
+      //  div#navbar-header{
+          
+          a#plersPreview{
+            color: $blue;
+            font-size: 1.9em;
+            transition: all .4s linear;
+            
+          }
+        //}
+      //}
+     
+      .navbar-right{
+        margin-right: 0 !important;
+        
+        
+        .dropdown-toggle{
+          background-color: $light;
+          
+          .caret{
+            color: $blue;
+              
+            }
+        }
+        
+        .dropdown-menu{
+          background-color: $lighter;
+        }
+      }
+   }
+  }
+}
+
+#wrapper #mainHeader nav.navbar-default a#plersPreview:hover{
+  color: $lighter;
+  font-size: 2.0em;
+  
+}  
+
+
+#main{
+  position: relative;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  
+  h1{
+    text-align: center;
+    margin: 40px 0 40px 0;
+    font-family: $fontNormal !important;
+    font-weight: $bold !important;
+    } 
+    
+    h2{
+      margin: 20px 0 30px 0;
+      font-family: $fontNormal !important;
+      font-weight: $bold !important;
+    }
+  
+  .row{
+    display: block;
+    width: 100%;
+    position: relative;
+   
+    #content{
+      width: 98%;
+      padding: 0px;
+    }
+  }
+}
+
+
+
+.players-images{
+  margin: 0 auto;
+}
+.player_link{
+  display: block;
+  border: 1px solid #e7e7e7;
+  text-align: center;
+  margin: 10px auto;
+  box-shadow: 3px 3px #e7e7e7;
+}
+
+.players-images a.player_link img.each_player_image{
+  margin: 20px;
+  text-align: center;
+  width: 196px !important;
+  height: 200px !important;
+  
+}
+
+footer{
+  position: relative;
+  display: block;
+  margin: 79px 0 0 0;
+  height: 50px;
+  width: 100%;
+  background-color: $light;
+  border-top: 3px solid $lighter;
+  
+  #footerInner{
+    with: 40%;
+    float: right;
+    margin: 8px 30px;
+    
+    p{
+      font-size: 1.3em;
+      margin: 11px 0 0 0;
+      color: $blue;
+      
+      span{
+        display: block;
+        width: 4px;
+        height: 4px;
+        margin: -9px 0 0 -17px;
+      }
+    }
+  }
+}
+
+
+
+
+

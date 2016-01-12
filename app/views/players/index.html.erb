@@ -1,0 +1,28 @@
+<% @title = " | Players " %>
+
+<h1> Player's Display </h1>
+ 
+ <% if params[:param_position] %>
+   <h2><%= params[:param_position] %></h2>
+ <% end %>
+
+ <% if @players.count == 0 %>
+    
+    <h5> "There are no Players in this Position yet" </h5>
+ <% else %>    
+ 
+   <div class="row" >
+     <div class="container">
+        <% @players.each do |player| %>
+          <div class="col-md-3 players-images" >
+      
+            <a href="/players/<%= player.id  %>" class="player_link">
+              <%= image_tag player.photo, :class => "each_player_image" %>
+            </a>
+          
+          </div>
+        <% end %>
+     </div>  
+   </div> 
+ <% end %>
+

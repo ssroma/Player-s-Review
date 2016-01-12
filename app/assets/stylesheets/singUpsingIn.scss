@@ -1,0 +1,58 @@
+// SingUpsingIn
+
+#main{
+  
+  .deviseSingin{
+    display: block;
+    width: 80%;
+    margin: 135px auto;
+    border: 1px solid $lighter;
+    border-radius: 15px;
+    padding: 35px;
+    clear: both;
+    
+    h2{
+      margin: 18px 0 40px 20px;
+      font-family: $fontNormal !important;
+      font-weight: $bold !important;
+    }
+    
+    .form-actions{
+      width: 30%;
+      margin-top: 40px;
+    }
+    
+    .formLinks{
+      width: 60%;
+      margin-top: 20px;
+      clear: both;
+      
+      a{
+        text-decoration: none;
+        display: block;
+        float: left;
+        margin-right: 10px;
+        width: 190px;
+        padding: 8px 12px;
+        color: #333;
+        border: 1px solid $lighter;
+        text-align: center;
+        border-radius: 4px;
+        background-color: #fff;
+        border-color: #ccc;
+      }
+    }
+      
+  }
+    
+}
+
+
+#main .deviseSingin .formLinks a:hover{
+  background-color: $lighter;
+}
+#main .deviseSingin .form-actions a{
+  background-color: $lighter;
+}
+
+

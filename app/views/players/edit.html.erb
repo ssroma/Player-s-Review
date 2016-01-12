@@ -1,0 +1,22 @@
+<% @title = " | Edit Details" %>
+
+
+<div class="deviseSingin" >
+  
+  <h1>Edit Player</h1>
+  
+    <%= simple_form_for @player, :html => {:multipart => true } do |f| %>
+    <%= f.input :name %>
+    <%= f.input :age %>
+    <%= f.input :photo, as: :file %>
+    <p><%= f.label :position_id, "Position" %></p>
+    <%= f.select :position_id,  @position %>
+    <%= f.input :description %>
+    <%= f.submit :submit %>
+    <% end %>
+  
+  <div class="main_links">
+      <%= link_to "Back to Players", players_path %>
+  </div>
+  
+</div>

@@ -1,0 +1,26 @@
+
+<div class="deviseSingin" >
+  
+  <h1> Update Review </h1>
+  
+  <%= simple_form_for( [@player, @review]) do |f|%>
+  
+    <label>Rating</label><br/>
+    <div id="rating-form">
+    </div>
+    <%= f.input :comment %>
+    <%= f.button :submit %>
+  
+  <% end %>
+
+</div>
+
+<script>
+  $('#rating-form').raty({
+    path: '/assets/',
+    number: 10,
+    scoreName: 'review[rating]'
+    
+  });
+  
+</script>

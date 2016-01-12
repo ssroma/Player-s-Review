@@ -1,0 +1,76 @@
+
+<% @title = " | Show Details " %>
+<h1>Player Details</h1>
+
+
+  <div class="col-md-4" id="showPhoto">
+      <a href="#">
+        <%= image_tag @player.photo, width: "350", height: "450", class: "imageShow" %>
+      </a>
+  </div>
+
+  
+  <div class="col-md-8" id="showDescription">
+    <h2>Name : <%= @player.name %></h2>
+    <h4>Age : <%= @player.age %></h4>
+    <h4>Position : <%= @player.position.name if @player.position %></h4>
+    <h2>Average Rating</h2>
+    <div class="average-review-rating" data-score="<%= @average_review  %>"></div>
+    <span>Based on <%= @player.reviews.count %> reviews</span>
+    <div class="descriptionField"> <h3>Description : </h3><p><%= @player.description %></p></div>
+  </div>
+
+
+<div id="reviewLinks" class="clear">
+    <div class="col-md-4 clear" id="showReviews">
+      
+      <%= render @player.reviews  %> 
+       
+      <div id="newRlayerReview">
+        <%= link_to "Add review", new_player_review_path(@player) %>
+      </div>
+    </div>
+ 
+  
+  
+  
+
+  
+    <div class="row clear" id="linksBotton">  
+      <div class="col-md-10 linksBotton">
+        <%= link_to "Back to Players ", players_path  %>
+      
+        <% if user_signed_in? %>  
+          <% if @player.user_id  == current_user.id %>
+            <%= link_to "Edit Player", edit_player_path(@player.id) %>
+            <%= link_to 'Delete Player',  { action: :destroy, id: @player.id }, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        <% end %>  
+      </div>
+    </div>
+</div>
+
+<script>
+  $('.review-rating').raty({
+    readOnly: true,
+    number      : 10,
+    score: function(){
+      
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
+</script>
+<script>
+  $('.average-review-rating').raty({
+    readOnly: true,
+    number      : 10,
+    score: function(){
+      
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
+</script>
+
+

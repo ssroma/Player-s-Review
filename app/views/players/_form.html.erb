@@ -1,0 +1,10 @@
+
+<%= simple_form_for @player, :html => {:multipart => true } do |f| %>
+  <%= f.input :name %>
+  <%= f.input :age %>
+  <%= f.input :photo, as: :file %>
+  <p><%= f.label :position_id, "Position" %></p>
+  <%= f.select :position_id, options_for_select(@position), :prompt => "select a Position" %>
+  <%= f.input :description %>
+  <%= f.submit :submit %>
+<% end %>
